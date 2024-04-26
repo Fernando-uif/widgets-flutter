@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
+import 'package:widgets_app/presentation/screens/cards/card_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String name = 'home_screen';
+
   const HomeScreen({super.key});
 
   @override
@@ -59,6 +62,7 @@ class _CustomListTile extends StatelessWidget {
 
         // Con go iriamos a 1 pantalla pero si queremos un stack tenemos que colocar el push
         context.push(menuItems.link);
+        // context.pushNamed(CardScreen.name);
       },
       subtitle: Text(menuItems.subTitle),
     );
