@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-
 class ButtonsScreen extends StatelessWidget {
   static const String name = 'buttons_screen';
   const ButtonsScreen({super.key});
@@ -71,6 +70,7 @@ class _ButtonsView extends StatelessWidget {
                   icon: const Icon(Icons.ac_unit_sharp),
                   label: const Text('Text button icon')),
               // Custom Button
+              const CustomButtons(),
               IconButton(
                   onPressed: () {}, icon: const Icon(Icons.app_blocking)),
               IconButton(
@@ -84,5 +84,30 @@ class _ButtonsView extends StatelessWidget {
             ],
           ),
         ));
+  }
+}
+
+class CustomButtons extends StatelessWidget {
+  const CustomButtons({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Material(
+        color: colors.primary,
+        // podemos agregar el evento de tap
+        child: InkWell(
+          onTap: () {},
+          child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Text(
+                'hello',
+                style: TextStyle(color: Colors.white),
+              )),
+        ),
+      ),
+    );
   }
 }
