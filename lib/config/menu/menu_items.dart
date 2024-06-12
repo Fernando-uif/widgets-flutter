@@ -59,4 +59,9 @@ const appMenuItems = <MenuItem>[
       subTitle: 'Add a value',
       link: '/counter',
       icon: Icons.add),
+  MenuItem(
+      title: 'Change theme',
+      subTitle: 'Change theme of the app',
+      link: '/theme-changer',
+      icon: Icons.color_lens),
 ];
