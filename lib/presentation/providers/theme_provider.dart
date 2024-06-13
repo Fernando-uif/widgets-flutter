@@ -4,4 +4,6 @@ import 'package:widgets_app/config/theme/app_theme.dart';
 final isDarkModeProvider = StateProvider<bool>((ref) => false);
 
 //  Inmutable List of colors
-final colorListProvider = Provider((ref)=> colorList);
+final colorListProvider = Provider((ref) => colorList);
+
+final selectedColorProvider = StateProvider((ref) => 0);
